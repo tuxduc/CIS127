@@ -1,7 +1,7 @@
+//test environment for things in C++
 #include <iostream>
+using namespace std;   //C++ Standard Library
 
-int main()
-{
-    std::cout << "Hello World" << std::endl;
-}
-c:\Users\ander\OneDrive\GRCC\25FALL\CIS127\github\myCppCode.cpp
+int main(){
+    cout << "Hello World";
+return 0}

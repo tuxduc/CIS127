@@ -8,3 +8,4 @@ learn Markdown Editor
 
 Tips:
 VSCode open terminal: Ctrl + `
+To prevent launch error: dont rename a file after run/debug!

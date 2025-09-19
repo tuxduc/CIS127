@@ -17,22 +17,22 @@ double exPts; cin>>exPts;//200pts
 
 //initialize percentage calculations variables
 double hwScore = (hwPts/HOMEWORK_MAX)*100;
-double qzScore = (qzPts/HOMEWORK_MAX)*100;
+double qzScore = (qzPts/QUIZZES_MAX)*100;
 double mtScore = (mtPts/MIDTERM_MAX)*100;
 double exScore = (exPts/FINAL_MAX)*100;
 
 //error correcting for % > 100
 if (hwScore > 100){
-hwScore = HOMEWORK_MAX/HOMEWORK_MAX;
+hwScore = 100;
 }
 if ( qzScore> 100){
-qzScore = QUIZZES_MAX/QUIZZES_MAX;
+qzScore = 100;
 }
 if (mtScore > 100){
-mtScore = MIDTERM_MAX/MIDTERM_MAX;
+mtScore = 100;
 }
 if (exScore > 100){
-exScore = FINAL_MAX/FINAL_MAX;
+exScore = 100;
 }
 //Calculate each category average using maximum points
 //Output an error message if student status is not one of the three options.
@@ -41,10 +41,10 @@ if(studentStatus != "UG" && studentStatus != "G" && studentStatus != "DL"){
 }
 else{
 //Otherwise, output category averages as a percentage using cout << "Homework: " << homework << "%" << endl;.
-cout << "Homework: " << fixed<< setprecision(1)<<placeholder<< "%" << endl;
-cout << "Quizzes: " << fixed<< setprecision(1)<<placeholder << "%" << endl;
-cout << "Midterm: " << fixed<< setprecision(1)<< placeholder<< "%" << endl;
-cout << "Final Exam: " << fixed<< setprecision(1)<<placeholder<< "%" << endl;
+cout << "Homework: " << fixed<< setprecision(1)<<hwScore<< "%" << endl;
+cout << "Quizzes: " << fixed<< setprecision(1)<<qzScore << "%" << endl;
+cout << "Midterm: " << fixed<< setprecision(1)<< mtScore<< "%" << endl;
+cout << "Final Exam: " << fixed<< setprecision(1)<<exScore<< "%" << endl;
 }
    return 0;
 }

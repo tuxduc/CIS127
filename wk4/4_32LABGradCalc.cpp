@@ -21,6 +21,11 @@ double qzScore = (qzPts/QUIZZES_MAX)*100;
 double mtScore = (mtPts/MIDTERM_MAX)*100;
 double exScore = (exPts/FINAL_MAX)*100;
 
+//student status course average total pts =1550
+double UGavg = 
+double Gavg = 
+double DLavg = 
+
 //error correcting for % > 100
 if (hwScore > 100){
 hwScore = 100;
@@ -45,6 +50,7 @@ cout << "Homework: " << fixed<< setprecision(1)<<hwScore<< "%" << endl;
 cout << "Quizzes: " << fixed<< setprecision(1)<<qzScore << "%" << endl;
 cout << "Midterm: " << fixed<< setprecision(1)<< mtScore<< "%" << endl;
 cout << "Final Exam: " << fixed<< setprecision(1)<<exScore<< "%" << endl;
+cout << studentStatus <<" average:"<<fixed<< setprecision(1)<< << "%" << endl;
 }
    return 0;
 }

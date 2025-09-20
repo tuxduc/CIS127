@@ -21,11 +21,6 @@ double qzScore = (qzPts/QUIZZES_MAX)*100;
 double mtScore = (mtPts/MIDTERM_MAX)*100;
 double exScore = (exPts/FINAL_MAX)*100;
 
-//student status course average total pts =1550
-double UGavg = 
-double Gavg = 
-double DLavg = 
-
 //error correcting for % > 100
 if (hwScore > 100){
 hwScore = 100;
@@ -39,6 +34,28 @@ mtScore = 100;
 if (exScore > 100){
 exScore = 100;
 }
+
+//student status course average total pts =1550
+double courseAvg = 0;
+if (studentStatus == "UG"){
+courseAvg = (hwScore*.20)+(qzScore*.20)+(mtScore*.30)+(exScore*.30);
+}
+
+else if (studentStatus == "G"){
+courseAvg = (hwScore*.15)+(qzScore*.05)+(mtScore*.35)+(exScore*.45);
+}
+
+else if (studentStatus == "DL"){
+courseAvg = (hwScore*.05)+(qzScore*.05)+(mtScore*.40)+(exScore*.50);
+}
+//course letter grade calculation
+string courseLetter;
+if(courseAvg >= 90.0){courseLetter = "A";}
+else if(courseAvg >= 80 && courseAvg < 90){courseLetter = "B";}
+else if(courseAvg >= 70 && courseAvg < 80){courseLetter = "C";}
+else if(courseAvg >= 60 && courseAvg < 70){courseLetter = "D";}
+else if(courseAvg < 60){courseLetter = "F";}
+
 //Calculate each category average using maximum points
 //Output an error message if student status is not one of the three options.
 if(studentStatus != "UG" && studentStatus != "G" && studentStatus != "DL"){
@@ -50,7 +67,8 @@ cout << "Homework: " << fixed<< setprecision(1)<<hwScore<< "%" << endl;
 cout << "Quizzes: " << fixed<< setprecision(1)<<qzScore << "%" << endl;
 cout << "Midterm: " << fixed<< setprecision(1)<< mtScore<< "%" << endl;
 cout << "Final Exam: " << fixed<< setprecision(1)<<exScore<< "%" << endl;
-cout << studentStatus <<" average:"<<fixed<< setprecision(1)<< << "%" << endl;
+cout << studentStatus <<" average: "<<fixed<< setprecision(1)<< courseAvg << "%" << endl;
+cout << "Course grade: "<< courseLetter << endl;
 }
    return 0;
 }

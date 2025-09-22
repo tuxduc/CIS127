@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "iostream": "cpp",
-        "lab5_18coutncharacters": "cpp"
+        "lab5_18coutncharacters": "cpp",
+        "xstring": "cpp",
+        "string": "cpp"
     }
 }

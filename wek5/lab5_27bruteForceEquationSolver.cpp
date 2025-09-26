@@ -6,21 +6,29 @@ we want to know if a solution exits where equation1 == equation2 for given input
 to do this, we will iterate xy in both equations through integer range -10 to 10
 */
 int main() {
-    int a; cin>>a;
-    int b; cin>>b;
-    int c; cin>>c;
-    int d; cin>>d;
-    int e; cin>>e;
-    int f; cin>>f;
+    int a,b,c,d,e,f; cin>>a>>b>>c>>d>>e>>f;
     int x,y;
-    int equation1 = (a*x)+(b*y);
-    int equation2 = (d*x)+(e*y);
+    bool solution=false;
    
-    for(x,y  ){
-        for(){
-
+    for(x=-10; x<=10; x++){
+        for(y=-10; y<=10; y++){
+            int equation1 = (a*x)+(b*y);
+            int equation2 = (d*x)+(e*y);
+            if(equation1==c && equation2==f){
+                solution=true;
+                break;
+            }
         }
+        if(solution==true){break;} 
     }
+if(solution==true){
+cout<<"x = "<<x<<", y = "<<y<<endl;
+}
+else{
+cout<<"There is no solution"<<endl;
+}
+
+
 
    return 0;
 }

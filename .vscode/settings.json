@@ -3,6 +3,7 @@
         "iostream": "cpp",
         "lab5_18coutncharacters": "cpp",
         "xstring": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "vector": "cpp"
     }
 }

@@ -3,7 +3,10 @@
 #include <string>
 using namespace std;
 
-//goal: print the phone number of the desired contact
+/*goal: print the phone number of the desired contact
+stubstr():  https://www.geeksforgeeks.org/cpp/substring-in-cpp/
+find():     https://www.geeksforgeeks.org/cpp/string-find-in-cpp/
+*/
 
 /* Define your function here */
 string GetPhoneNumber(vector<string> nameVec, vector<string> phoneNumberVec, string contactName){
@@ -14,8 +17,7 @@ return result;
 
 int main() {
    /* Type your code here */
-
-int wordpairs; cin>>wordpairs;
+int wordpairs; cin>>wordpairs;cin.ignore();
 string contactList; getline(cin,contactList);
 string contactName; getline(cin,contactName);
 
@@ -25,7 +27,6 @@ vector <string> phoneNumberVec;//create phoneNumberVec
 
 string contactNumber=GetPhoneNumber(nameVec, phoneNumberVec, contactName);
 
-cout<<contactNumber<<endl;
-cout<<contactList;
+//cout<<contactNumber<<endl;
    return 0;
 }

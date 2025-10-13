@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <string>
 using namespace std;
 
 //goal: print the phone number of the desired contact
@@ -13,9 +14,10 @@ return result;
 
 int main() {
    /* Type your code here */
+
 int wordpairs; cin>>wordpairs;
-string contactList; cin>>contactList;
-string contactName; cin>>contactName;
+string contactList; getline(cin,contactList);
+string contactName; getline(cin,contactName);
 
 vector <string> nameVec;//create nameVec
 

@@ -1,24 +1,11 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 int main() {
 
-   //cout<<"hello im here!";
-   cout<<"Give me 3 inputs!"<<endl;
-   int a,b,c;cin>>a>>b>>c;
-   int x,y;
-   bool solutionFound=false;
-
-   for(x=0; x<=5; x++){
-    for(y=0; y<=5; y++){
-        int equation=(a*x)+(b*y); //iterate over this equation
-        if(equation==c){
-            cout<<"Success!"<<endl<<"x= "<<x<<", y= "<<y;
-            return 0;
-        }
-    }
-}
-    cout<<"No solution found.";
-
+string test; getline(cin, test);
+string test2; getline(cin, test2);
+cout<<test<<test2;
    return 0;
 }

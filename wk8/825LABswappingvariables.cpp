@@ -5,7 +5,12 @@ using namespace std;
 
 /* Define your function here */ 
 void SwapValues(int& userVal1, int& userVal2, int& userVal3, int& userVal4){
-cout<<"Hello Dolly!";
+int tempval=userVal1;//store val1
+    userVal1=userVal2;
+    userVal2=tempval;
+tempval=userVal3; //store val3
+    userVal3=userVal4;
+    userVal4=tempval;
 }
 
 int main() {

@@ -1,14 +1,16 @@
 /*
-Starbucks Simulator
+PIzza Simulator
 
 */
-class Starbucks{
+class Pizza{
+    private:
+        vector<string>
+    
     public:
 
-    private:
+    
+        
 }
-//construsctors
-
 
 int main(){
 
